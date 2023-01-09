@@ -4,7 +4,32 @@
   box-sizing: border-box;
 }
 
+.wrapper {
+  background-color: #1d43ca;
+  width: 1000px;
+  margin: 100px auto;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
 
+.box {
+  background-color: #98ccfd;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 50px;
+}
 
+.header {
+  grid-column: 1/4;
+}
 
+.main {
+  grid-row: 2 /4;
+}
 
+.footer {
+  grid-column: 2 / 4;
+}
