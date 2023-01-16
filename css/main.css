@@ -4,7 +4,22 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 1300px;
+  padding: 20px;
+  margin: 100px auto;
+  margin: 0 auto;
+}
 
+table {
+  border-collapse: collapse;
+}
 
-
-
+table,
+th,
+td {
+  border: 1px solid black;
+  width: 1000px;
+  text-align: center;
+  padding: 10px;
+}
