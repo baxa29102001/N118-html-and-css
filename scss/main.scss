@@ -1,0 +1,38 @@
+$main-color: red;
+
+$border: 5px solid black;
+
+@import "./second.scss";
+
+@mixin boxCardshape($color) {
+  height: 100px;
+  background-color: $color;
+  border: $border;
+
+  &:hover {
+    background-color: blue;
+  }
+}
+
+.box {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: $main-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 15px;
+  &_card {
+    @include boxCardshape(yellow);
+  }
+
+  &_card2 {
+    @include boxCardshape(green);
+  }
+}
+
+
+
+@media screen and(min-w) {
+  
+}
