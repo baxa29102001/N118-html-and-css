@@ -1,6 +1,66 @@
-.bohodir {
-  color: white;
-  font-size: 30px;
+/*  Desktop First responsive */
+
+/* .box_container {
+  margin: 0 auto;
+  background-color: yellowgreen;
+  padding: 15px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
-/*# sourceMappingURL=main.css.map */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .box_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .box_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box {
+    width: 100%;
+  }
+} */
+
+/* Mobile First Responsive */
+
+.box_container {
+  /* width: 400px; */
+
+  background-color: yellowgreen;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.box {
+  height: 100px;
+  background-color: yellow;
+}
+
+@media screen and (min-width: 562px) {
+  .box_container {
+    background-color: red;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .box_container {
+    background-color: blue;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile First Responsive */
