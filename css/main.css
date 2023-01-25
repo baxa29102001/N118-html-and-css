@@ -1,6 +1,56 @@
-.bohodir {
-  color: white;
-  font-size: 30px;
+body {
+  background-color: black;
+}
+
+.container {
+  height: 100vh;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.pacman {
+  transform: rotate(45deg);
+}
+.pacman::before, .pacman::after {
+  content: "";
+  top: 0;
+  border-radius: 50%;
+  position: absolute;
+}
+.pacman::before {
+  border: 35px solid yellow;
+  color: wheat;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  animation: openMountDown 1s ease-in-out infinite;
+}
+.pacman::after {
+  border: 35px solid yellow;
+  color: wheat;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  animation: openMount 1s ease-in-out infinite;
+}
+
+@keyframes openMount {
+  0%, 100% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+}
+@keyframes openMountDown {
+  0%, 100% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(55deg);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
