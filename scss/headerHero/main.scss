@@ -1,0 +1,154 @@
+.hero_header {
+  background-color: $light_green;
+
+  background-image: url(../../img/circle.svg);
+  background-repeat: no-repeat;
+
+  background-position: bottom center;
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 0 0 0;
+
+  &_ul {
+    display: none;
+  }
+
+  &_phone_number {
+    display: none;
+  }
+}
+
+.hero {
+  &_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 18px;
+
+    span {
+      color: $pink;
+    }
+  }
+
+  &_desc {
+    color: $white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    padding-bottom: 197px;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.animatedNavigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &_nav {
+    background-color: $light_green;
+    background-image: url(../../img/second_circele.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right -101px;
+    width: 65%;
+    margin-left: auto;
+    height: 100%;
+
+    &_ul {
+      list-style: none;
+      padding-left: 48px;
+
+      li {
+        margin-bottom: 24px;
+
+        a {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 28px;
+          color: $white;
+          text-decoration: none;
+        }
+      }
+
+      .smallScreenBtn {
+        margin-top: 12px;
+        color: $white;
+        text-decoration: none;
+        border: 2px solid #ffffff;
+        border-radius: 24px;
+        padding: 9px 33px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .cancel_btn {
+    padding: 56px 25px 0 0;
+    margin-bottom: 39px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: $mobile_width) {
+  .nav {
+    &_ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+      li {
+        a {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 28px;
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &_phone_number {
+      display: block;
+    }
+
+    &_burger_btn {
+      display: none;
+    }
+
+    &_phone_number {
+      color: $white;
+      text-decoration: none;
+      border: 2px solid #ffffff;
+      border-radius: 24px;
+      padding: 9px 33px;
+      display: inline-block;
+    }
+  }
+}
