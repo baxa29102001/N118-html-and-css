@@ -164,14 +164,6 @@ body::-webkit-scrollbar {
   .nav_burger_btn {
     display: none;
   }
-  .nav_phone_number {
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    border-radius: 24px;
-    padding: 9px 33px;
-    display: inline-block;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
