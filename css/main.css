@@ -3,4 +3,13 @@
   font-size: 30px;
 }
 
+.box_container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-yellowgreen {
+  background-color: yellowgreen;
+}
+
 /*# sourceMappingURL=main.css.map */
