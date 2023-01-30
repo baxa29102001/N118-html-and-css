@@ -17,29 +17,27 @@ body::-webkit-scrollbar {
   width: 347px;
   margin: 0 auto;
   padding: 0 10px;
+  width: 100%;
 }
 
 @media screen and (min-width: 576px) {
   .container {
-    width: 100%;
+    max-width: 540px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 100%;
-    padding: 40px;
+    max-width: 720px;
   }
 }
 @media screen and (min-width: 992px) {
   .container {
-    width: 100%;
-    padding: 40px;
+    max-width: 960px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1150px;
-    padding: 20px;
+    max-width: 1140px;
   }
 }
 .hero_header {
@@ -164,6 +162,54 @@ body::-webkit-scrollbar {
   .nav_burger_btn {
     display: none;
   }
+}
+.container_checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container_checkbox input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.container_checkbox .checkmark {
+  width: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  background-color: #eee;
+}
+.container_checkbox input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+.container_checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container_checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.container_checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=main.css.map */
