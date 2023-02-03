@@ -1,15 +1,26 @@
-.bohodir {
-  color: white;
-  font-size: 30px;
+:root {
+  --white: #fff;
+  --black: black;
+  --whiteSmoke: whitesmoke;
+}
+
+body {
+  background-color: var(--white);
 }
 
 .box_container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--black);
   display: flex;
-  align-items: center;
+
+  padding: 20px;
+  gap: 30px;
 }
 
-.custom-yellowgreen {
-  background-color: yellowgreen;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: var(--white);
+  border-radius: 10px;
 }
-
-/*# sourceMappingURL=main.css.map */
