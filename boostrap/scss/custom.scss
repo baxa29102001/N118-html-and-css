@@ -1,0 +1,67 @@
+@import "./functions";
+@import "./variables";
+@import "./maps";
+@import "./mixins";
+@import "./utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$spacer: 2rem;
+$custom-colors: map-merge(
+  $theme-colors,
+  (
+    "dark_card_green": #012f34,
+    "dark_green": #004047,
+    "aqua": #79c8c7,
+    "pink": #f67e7e,
+  )
+);
+
+// (
+//   "dark_card_green": #012f34,
+//   "dark_green": #004047,
+//   "aqua": #79c8c7,
+// );
+
+$custom-m: (
+  "6": 100px,
+  "7": 200px,
+);
+
+$general-customs-colors: (
+  "background-color": (
+    property: background-color,
+    class: bg,
+    values: map-merge($utilities-bg-colors, $custom-colors),
+  ),
+  "color": (
+    property: color,
+    class: text,
+
+    values: map-merge($utilities-text-colors, $custom-colors),
+  ),
+);
+
+$utilities: map-merge($utilities, ($general-customs-colors));
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "margin":
+      map-merge(
+        map-get($utilities, "margin"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "margin"), "values"),
+              $custom-m
+            ),
+        )
+      ),
+  )
+);
+@import "./utilities/api";
+@import "bootstrap.scss";
